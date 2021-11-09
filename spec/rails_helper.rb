@@ -8,7 +8,7 @@ require File.expand_path('../config/environment', __dir__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
-
+#creates the tested requirements when calling rails_helper
 require "rails_helper"
 
 RSpec.describe "The math below is wrong..." do
@@ -27,6 +27,7 @@ RSpec.describe "hello spec" do
   end
  end
  
+ #sets up simplecov to handle coverage report
  require 'simplecov'
  SimpleCov.start 'rails' do
    add_filter '/bin/'
