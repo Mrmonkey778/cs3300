@@ -11,6 +11,11 @@ require 'rspec/rails'
 #creates the tested requirements when calling rails_helper
 require "rails_helper"
 
+require 'devise'
+require_relative 'support/controller_macros'
+
+
+
 RSpec.describe "The math below is wrong..." do
   it "should equal 42" do
     expect(6 * 7).to eq(42)
@@ -89,4 +94,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include FactoryBot::Syntax::Methods
+  config.extend ControllerMacros, :type => :controller
 end
