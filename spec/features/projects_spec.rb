@@ -71,4 +71,27 @@ RSpec.feature "Projects", type: :feature do
       expect(Project.count).to eq(0)
     end
   end
+
+  context "Signing up should" do
+    before(:each) do
+      visit "/users/sign_up"
+
+    end
+
+      scenario "should be successful" do
+        fill_in "Email", with: "Test@gmail.com"
+        fill_in "Password", with: "123456"
+        fill_in "Password confirmation", with: "123456"
+        click_button "Sign up"
+        expect(page).to have_content("Welcome! You have signed up successfully.")
+      end
+
+      scenario "should fail" do
+        fill_in "Email", with: "Test@gmail.com"
+        fill_in "Password", with: "123456"
+        fill_in "Password confirmation", with: "123457"
+        click_button "Sign up"
+        expect(page).to have_content("Password confirmation doesn't match Password")
+      end
+    end
 end
