@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe ProjectsController, type: :controller do
 
-  login_user
+login_user
 
   #sets up base scenario to test that the database is successfully giving us the projects we want (by index)
   context "GET #index" do

@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 #sets up base scenario to test that the homepage displays all of the prjects
 RSpec.feature "HomePages", type: :feature do

@@ -5,3 +5,4 @@ FactoryBot.define do
       password {"qwerty"}
       # Add additional fields as required via your User model
     end
+end

@@ -8,6 +8,9 @@
           null,
           null,
           1,
+          null,
+          null,
+          1,
           4,
           null,
           null,
@@ -88,13 +91,6 @@
           null
         ]
       },
-      "/root/cs3300/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/root/cs3300/app/channels/application_cable/channel.rb": {
         "lines": [
           0,
@@ -139,6 +135,27 @@
         "branches": {
         }
       },
+      "/root/cs3300/app/models/user.rb": {
+        "lines": [
+          0,
+          null,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/root/cs3300/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
       "/root/cs3300/app/mailers/application_mailer.rb": {
         "lines": [
           0,
@@ -150,6 +167,6 @@
         }
       }
     },
-    "timestamp": 1636427253
+    "timestamp": 1638324664
   }
 }
